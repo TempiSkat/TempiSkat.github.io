@@ -25,13 +25,12 @@ h1 {
   margin-left: 500px;
   margin-bottom: 500px;
   margin-top:187px;
-color : black;
-position : absolute;
-top : 140px;
-left : 40px;
-transform : rotate(90deg);
-font-size : 40px;
-
+  color : black;
+  position : absolute;
+  top : 140px;
+  left : 40px;
+  transform : rotate(90deg);
+  font-size : 40px;
 }
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes example {
@@ -41,7 +40,6 @@ font-size : 40px;
   75%  {background-color:green; left:0px; top:265px;}
   100% {background-color:red; left:0px; top:0px;}
 }
-
 /* Standard syntax */
 @keyframes example {
   0%   {background-color:red; left:0px; top:0px;}
@@ -50,19 +48,16 @@ font-size : 40px;
   75%  {background-color:green; left:0px; top:265px;}
   100% {background-color:red; left:0px; top:0px;}
 }
+div:hover {
+  animation-play-state: paused;
+}
 </style>
 <script>
   function action() {
-   
     if(document.getElementById("body").style.backgroundColor == "darkgray")
     document.getElementById("body").style.backgroundColor = "slategray";
     else document.getElementById("body").style.backgroundColor = "darkgray";
-
-    document.getElementById("asd").value = "new";
-
 }
-
-
 function replaceButtonText(buttonId, text)
 {
   if (document.getElementById)
@@ -90,7 +85,6 @@ function size(buttonId,size)
  var button2 = document.getElementById(buttonId);
  var sizes = parseInt(size);
  sizes=sizes*1000;
-
  button2.style.width=sizes;
  button2.style.height=sizes;
  button2.style.background='teal';
@@ -99,14 +93,10 @@ function size(buttonId,size)
  button2.style.left = "600px";
  button2.style.top = "600px";
 }
-
-
-
-
 </script>
 </head>
-<body id="body">
 
+<body id="body">
 <h1>The move</h1>
 <div>anything really</div>
 <h2><button id="asd" name="action2" type="button" onclick="action(); 
