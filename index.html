@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+body{ 
+  background-color: darkgray;
+}
+div {
+  margin-right:500px;
+  margin-left: 500px;
+  margin-bottom: 500px;
+  margin-top:170px;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation: example 4s infinite;
+  animation-name: example;
+  animation-duration: 4s;
+}
+h1 {
+  margin-right:500px;
+  margin-left: 500px;
+  margin-bottom: 500px;
+  margin-top:187px;
+color : black;
+position : absolute;
+top : 140px;
+left : 40px;
+transform : rotate(90deg);
+font-size : 40px;
+
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:130px; top:-10px;}
+  50%  {background-color:blue; left:120px; top:265px;}
+  75%  {background-color:green; left:0px; top:265px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:130px; top:-10px;}
+  50%  {background-color:blue; left:120px; top:265px;}
+  75%  {background-color:green; left:0px; top:265px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+</style>
+<script>
+  function action() {
+   
+    if(document.getElementById("body").style.backgroundColor == "darkgray")
+    document.getElementById("body").style.backgroundColor = "slategray";
+    else document.getElementById("body").style.backgroundColor = "darkgray";
+
+    document.getElementById("asd").value = "new";
+
+}
+
+
+function replaceButtonText(buttonId, text)
+{
+  if (document.getElementById)
+  {
+    var button=document.getElementById(buttonId);
+    if (button)
+    {
+      if (button.childNodes[0])
+      {
+        button.childNodes[0].nodeValue=text;
+      }
+      else if (button.value)
+      {
+        button.value=text;
+      }
+      else 
+      {
+        button.innerHTML=text;
+      }
+    }
+  }
+}
+function size(buttonId,size)
+{
+ var button2 = document.getElementById(buttonId);
+ var sizes = parseInt(size);
+ sizes=sizes*1000;
+
+ button2.style.width=sizes;
+ button2.style.height=sizes;
+ button2.style.background='teal';
+ button2.style.color='white';
+ button2.style.fontSize=size;
+ button2.style.left = "600px";
+ button2.style.top = "600px";
+}
+
+
+
+
+</script>
+</head>
+<body id="body">
+
+<h1>The move</h1>
+<div>anything really</div>
+<h2><button id="asd" name="action2" type="button" onclick="action(); 
+replaceButtonText('asd','wtf'); size('asd','40px');" >Change background</button>
+</h2>
+</body>
+</html>
